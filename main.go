@@ -18,10 +18,10 @@ type VMInfo struct {
 }
 
 var (
-	user         string
-	bridge       string
-	currentHost  string
-	newHost      string
+	user          string
+	bridge        string
+	currentHost   string
+	newHost       string
 	defaultBridge = "virbr0"
 )
 
@@ -144,7 +144,7 @@ func main() {
 	flag.Parse()
 
 	if flag.NArg() != 1 {
-		fmt.Println("Usage: kvm-freebsd-hostname [flags] <vm_name>")
+		fmt.Println("Usage: kvm-vm-hostname-freebsd [flags] <vm_name>")
 		flag.PrintDefaults()
 		os.Exit(1)
 	}
