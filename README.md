@@ -21,14 +21,6 @@ This tool was developed to address a specific limitation when working with FreeB
 - SSH access to the target FreeBSD VM
 - `sudo` privileges on the target FreeBSD VM
 
-## Installation
-
-Build the tool:
-
-```
-$ go build
-```
-
 ## Usage
 
 ```
