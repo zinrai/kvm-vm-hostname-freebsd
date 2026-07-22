@@ -141,7 +141,13 @@ func main() {
 	flag.StringVar(&bridge, "bridge", defaultBridge, "Bridge name")
 	flag.StringVar(&currentHost, "current", "", "Current hostname (required)")
 	flag.StringVar(&newHost, "new", "", "New hostname")
+	showVersion := flag.Bool("version", false, "Print version information and exit")
 	flag.Parse()
+
+	if *showVersion {
+		printVersion()
+		os.Exit(0)
+	}
 
 	if flag.NArg() != 1 {
 		fmt.Println("Usage: kvm-vm-hostname-freebsd [flags] <vm_name>")
